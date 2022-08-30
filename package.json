@@ -1,0 +1,37 @@
+{
+  "name": "promise-implementation",
+  "version": "1.0.0",
+  "description": "In this project I intend on implementing the promise API, including: .then, .catch, and .finally, in addition to all of the different static methods on promises.",
+  "main": "MyPromise.js",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest single run all tests",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+      "-c",
+      "./config/test/jest.json",
+      "--verbose", 
+      "-i", 
+      "--no-cache"
+    ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abeer958/Promise-Implementation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abeer958/Promise-Implementation/issues"
+  },
+  "homepage": "https://github.com/Abeer958/Promise-Implementation#readme"
+}
