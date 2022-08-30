@@ -7,19 +7,20 @@ PENDING: 'pending'
 class MyPromise {
     #thenCbs = []
     #catchCbs = []
-    #runCallbacks = []
     #state = STATE.PENDING
     #value
+    #onSuccessBind = this.#onSuccess.bind(this)
+    #onFailBind = this.#onFail.bind(this)
 
   constructor(cb) {
     try {
-      cb(this.#onSuccess, this.#onFail);
+      cb(this.#onSuccessBind, this.#onFailBind);
     } catch (e) {
-      this.onFail(e);
+      this.#onFail(e);
     }
   }
 
-  runCallbacks() {
+  #runCallbacks() {
     if (this.#state === STATE.FULFILLED) {
         this.#thenCbs.forEach(callback => {
             callback(this.#value)
@@ -49,12 +50,19 @@ class MyPromise {
     this.#runCallbacks()
   }
 
-  then(cb) {
-    this.#thenCbs.push(cb)
+  then(thenCb, catchCb) {
+    if (thenCb != null) this.#thenCbs.push(thenCb)
+    if (catchCb != null) this.#catchCbs.push(catchCb)
     this.#runCallbacks()
+  }
+
+  catch(cb) {
+    this.then(undefined, cb)
+  }
+  
+  finally(cb) {
+
   }
 }
 
 module.exports = MyPromise;
-
-

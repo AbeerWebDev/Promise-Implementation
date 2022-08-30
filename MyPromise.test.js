@@ -154,4 +154,3 @@ function promise({ value = DEFAULT_VALUE, fail = false } = {}) {
     fail ? reject(value) : resolve(value)
   })
 }
-Footer
