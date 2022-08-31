@@ -51,9 +51,11 @@ class MyPromise {
   }
 
   then(thenCb, catchCb) {
-    if (thenCb != null) this.#thenCbs.push(thenCb)
-    if (catchCb != null) this.#catchCbs.push(catchCb)
-    this.#runCallbacks()
+    return new MyPromise((resolve, reject) => {
+      if (thenCb != null) this.#thenCbs.push(thenCb)
+      if (catchCb != null) this.#catchCbs.push(catchCb)
+      this.#runCallbacks()
+    })
   }
 
   catch(cb) {
