@@ -28,6 +28,9 @@ To take a look under the hood of promises.
 * An UncaughtPromiseError class.
 * An onSuccess method
 * An onFail Method.
+* A then method.
+* A catch method.
+* A finally method.
 * All static methods associated with promises which are: resolve, reject, all, allSettled, race, and any.
 
 ## Installation and Setup Instructions
