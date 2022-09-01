@@ -55,7 +55,7 @@ To Run Test Suite:
 Project is: Completed
 
 ## Room for Improvement
-* Add a JS file that uses our prommise to demonstrate how it is used.
+* Add a JS file that uses our promise to demonstrate how it is used.
 
 ## Acknowledgements
 * Many thanks to webdevsimplified.
