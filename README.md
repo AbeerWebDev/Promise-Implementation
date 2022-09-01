@@ -13,7 +13,7 @@ This project does not have a live demo. Kindly view the JS files in the reposito
 * Contact
 
 ## General Information
-In this project I ihave implemented the promise API, including: .then, .catch, and .finally, in addition to all of the different static methods in promises. I have also included a test file for all of the methods.
+In this project I have implemented the promise API, including: .then, .catch, and .finally, in addition to all of the different static methods in promises. I have also included a test file for all of the methods.
 
 ### Purpose of this project
 To take a look under the hood of promises.
